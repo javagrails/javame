@@ -1,0 +1,48 @@
+package com.bk.utils;
+
+import android.app.Activity;
+import android.util.Log;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Properties;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: salman
+ * Date: 5/12/13
+ * Time: 5:34 PM
+ * To change this template use File | Settings | File Templates.
+ */
+public class PropertiesReader extends Activity{
+
+    /*Resources resources = this.getResources();
+    AssetManager assetManager = resources.getAssets();*/
+
+    //private static Properties ppt;
+    public final static String CONFIG_FILE_NAME = "config.properties";
+
+    public Properties loadProperties() throws IOException {
+        String[] fileList = {CONFIG_FILE_NAME};
+        Properties prop = new Properties();
+        for (int i = fileList.length - 1; i >= 0; i--) {
+            String file = fileList[i];
+            try {
+                InputStream fileStream = getAssets().open(file);
+                prop.load(fileStream);
+                fileStream.close();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+                System.out.println("FileNotFoundException : "+e.getMessage());
+            } catch (IOException io) {
+                io.printStackTrace();
+                System.out.println("IOException : "+io.getMessage());
+            }
+        }
+        System.out.println("prop : "+prop);
+        System.out.println("prop : "+prop);
+        return prop;
+    }
+}
