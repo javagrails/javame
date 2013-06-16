@@ -1,1 +1,69 @@
-﻿fsff
+﻿http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History
+
+--------------------------
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git config --global user.email "salman1m22@gmail.com"
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git config --global user.name "javagrails"
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git add how-to.txt
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git commit -a -m "how-to.txt added"
+[master 34c9e8e] how-to.txt added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 how-to.txt
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git push -all
+error: did you mean `--all` (with two dashes ?)
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git push --all
+Username for 'https://github.com': javagrails
+Password for 'https://javagrails@github.com':
+fatal: Authentication failed
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git push --all
+Username for 'https://github.com': javagrails
+Password for 'https://javagrails@github.com':
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/javagrails/restdroid.git
+   2b86c56..34c9e8e  master -> master
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ gitk
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git history
+git: 'history' is not a git command. See 'git --help'.
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git status
+# On branch master
+nothing to commit, working directory clean
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$ git log
+commit 34c9e8e183088aafa9abd7dc653b60cc6178a81a
+Author: javagrails <salman1m22@gmail.com>
+Date:   Sun Jun 16 14:34:17 2013 +0600
+
+    how-to.txt added
+
+commit 2b86c56d421e5ed0d3621239917002423be30bc5
+Author: javagrails <salman1m22@gmail.com>
+Date:   Tue May 21 20:59:43 2013 +0600
+
+    salman.txt file removed-or-deleted
+
+commit 0f8e3a0bc6f44da10f0226bd6db68ea3876b27c2
+Author: javagrails <salman1m22@gmail.com>
+Date:   Tue May 21 20:46:29 2013 +0600
+
+    restdroid all files added
+
+commit 9add50a6791ec86922be014b7b3a548cdf889236
+Author: javagrails <salman1m22@gmail.com>
+Date:   Tue May 21 20:37:04 2013 +0600
+
+    salman.txt file added
+salman@SALMAN-PC /g/gitbox/restdroid (master)
+$
