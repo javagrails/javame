@@ -1,6 +1,6 @@
 ﻿http://git-scm.com/book/en/Git-Basics-Viewing-the-Commit-History
 
---------------------------
+-----------How-to---------------
 salman@SALMAN-PC /g/gitbox/restdroid (master)
 $ git config --global user.email "salman1m22@gmail.com"
 salman@SALMAN-PC /g/gitbox/restdroid (master)
